@@ -12,10 +12,10 @@ library PriceConverter {
         return uint256(price * 1e10); //1**10 == 10000000000
     }
 
-    function getVersion() internal view returns (uint256){
-        AggregatorV3Interface priceFeed = AggregatorV3Interface(0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e);
-        return priceFeed.version();
-    }
+    // function getVersion() internal view returns (uint256){
+    //     AggregatorV3Interface priceFeed = AggregatorV3Interface(0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e);
+    //     return priceFeed.version();
+    // }
 
     function getConversionRate(uint256 ethAmount, AggregatorV3Interface priceFeed) internal view returns(uint256){
         uint256 ethPrice = getPrice(priceFeed);
